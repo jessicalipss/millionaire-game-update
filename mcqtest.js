@@ -27,7 +27,7 @@ var question = [
 ['What is the chemical name of this subtance','NaCl','Na2Cl','Nacl2','Kcl','T4.jpg'],
 ['What is this plant know for its health benefit','Ashwagandha','Moriga','Moringa','Noni','t5.jpg'],
 ['Popular herd used in italian cuisine','Basilic','Oregano','Thym','Ment','t6.jpg'],
-['What this popular cultural dish ?','Paella','Pailla','Couscous','Bryani','t7.jpeg'],
+['What this popular cultural dish ?','Paella','Pailla','Couscous','Bryani','t7.jpg'],
 ['What is this species of animal?','Reptile','Mammal','Amphibians','Invertebrates','t8.jpg'],
 ['The machu picchu is the heritaged of what civilisation ?','The egyptian','The Napas','Taoism','The mayas','t9.jpg'],
 ['Where is this momument located.','Abu Dhabi','Bahrain','Dubai','Saudi Arabia','t10.jpg'],
