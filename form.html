@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+     <link rel ="stylesheet" href="form.css">
+    <link rel ="stylesheet" href="home.css">
+    <script src="home.js" charset="utf-8"></script>
+    <script src="form.js"></script>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+  </style>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&display=swap');
+  </style>
+  <style>
+    body{
+      background-image: url('Who Wants to Be a Millionaire New Edition.png');
+
+    }
+    h1{
+    font-family: 'Roboto', sans-serif;
+    width:500px;
+    color:#624DF8;
+    }
+p{
+  color: red;
+}
+img{
+  width: 300px;
+  height: 150px;
+}
+footer{
+  position:static;
+}
+#white{
+  font-family: 'Playfair Display', serif;
+  color:white;
+}
+#space2{
+  padding-top:100px;
+}
+  </style>
+</head>
+<body onload="valcaptcha();">
+  <header>
+  <h1 id="white"><center>MILLIONAIRE GAME</center></h1>
+  <ul >
+  <li><a href="index.html">HOME</a></li>
+  <li><a href="form.html">REGISTER</a></li>
+  <li><a href="login.html">LOGIN</a></li>
+  </ul>
+  </header>
+  <div id="container">
+
+<form method="post" id ="space2" action ="login.html" onsubmit="return Validate();">
+
+
+  <h1 id = "title">Personal Information</h1>
+
+    <label for="Fname">First name :</label>
+    <input type="text" id="txtfname" onblur="valFn();" autofocus="autofocus">
+    <p id="errfn"></p>
+    <br><br>
+ <label for="Lname">Last name :</label>
+<input type="text" id ="txtlname" onblur="valLn();">
+<p id = "errln"></p>
+<br><br>
+<label for="Nic">National identification number:</label>
+<input type="text" name="Nic" id = "txtid" onblur="valnic();">
+<p id="errnic"></p>
+<br><br>
+<div id="specialbutton" onclick="valrad();">
+<label for="Nic">Sex:</label>
+<input type="checkbox" id="male" name="Male" value="male">
+<label for="Male">Male</label>
+<input type="checkbox" id="fmale" name="Female" value="female">
+<label for="Female">Female</label>
+<p id="rad"></p>
+
+</div>
+
+  <h1>Contact Information</h1>
+
+    <label for="Phonenum">Phone :</label>
+ <input type="text" name="Phonenum" id ="txtphonenum" onblur="valphonenum();" >
+ <p id = "errph"></p>
+ <br><br>
+ <label for="ddlcoun">Country: </label>
+ <select name="country" id="ddlcoun" onblur="valicoun();"  onclick="valcoun();">
+  <option value=""></option>
+   <option value="mur">Mauritius</option>
+   <option value="us">America</option>
+   <option value="UK">United kingdom</option>
+   <option value="fr">France</option>
+ </select>
+ <p id="txtcount"></p>
+ <br><br>
+<div id = "addcount">
+<label for="state">State:</label>
+<input type="text" name="stste" id = "state" onblur="valEmpty1();">
+<p id = "txtstate"></p>
+</div>
+
+  <h1>Account Information</h1>
+
+ <label for="Email">Email :</label>
+ <input type="text" id="email" onblur ="valEmail();">
+ <P id = "erremail"></p>
+ <br><br>
+ <label for="uname">Username :</label>
+ <input type="text" id="uname" onblur ="valUname();">
+ <P id = "erruname"></p>
+ <br><br>
+<label for="passw">Password:</label>
+<input type="text" id="passw" onblur="valEmpty();">
+<p id = "txtpassw"></p>
+<br><br>
+<label for="cpassw">Confirm password:</label>
+<input type="text" id="cpassw" onblur="valPassword('cpassw','txtcpassw','passw')">
+<p id="txtcpassw"></p>
+<br><br>
+<label for captcha>captcha</label>
+<p>
+ <img id="slideshow">
+
+</p>
+<input type="text" id="chckimg" >
+<p id="txtconfirm"></p>
+<input type="button" value = "Enter" onclick="valcaptchachck();">
+<br>
+<br>
+<div id="specialbutton" id ="center">
+<input type = "submit"  class="button-63" value = "SUBMIT"> <br> <input type = "button" class="button-63" value = "RESET" onclick = "valconfirm();">
+</div>
+  </form>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <div class="footer-basic">
+      <footer>
+          <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+          <ul class="list-inline">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+          </ul>
+          <p class="copyright">Millionaire Game copyright © 2022<img src="Millionaire game-1.png" class="logo"></p>
+
+      </footer>
+  </div>
+</body>
+</html>

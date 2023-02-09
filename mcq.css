@@ -1,0 +1,56 @@
+.input {
+  position: relative;
+  display: block;
+  background: transparent;
+  width: 300px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #e04e5e;
+  margin: 40px auto;
+  font-family: Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+.input:before,
+.input:after {
+  position: absolute;
+  content: '';
+  width: 300px;
+  left: 0px;
+  height: 34px;
+  z-index: -1;
+}
+
+.input:before {
+  transform: perspective(15px) rotateX(3deg);
+}
+.input:after {
+  top: 40px;
+  transform: perspective(15px) rotateX(-3deg);
+}
+
+/* Button Border Style */
+
+.input.border:before,
+.input.border:after {
+  border: 4px solid #e04e5e;
+}
+.input.border:before {
+  border-bottom: none; /* to prevent the border-line showing up in the middle of the shape */
+}
+.input.border:after {
+  border-top: none; /* to prevent the border-line showing up in the middle of the shape */
+}
+
+/* Button hover styles */
+
+.input.border:hover:before,
+.input.border:hover:after {
+  background: #e04e5e;
+}
+.input.border:hover {
+  color: #fff;
+}

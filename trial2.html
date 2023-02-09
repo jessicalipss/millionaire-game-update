@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  $(document).ready(function(){
+    var question = [
+      ['What is the boiling point temperature (water)?','50 degree celsius','100 degree celsius','150 degree celsius','200 degree celsius','B'],
+      ['Which fruit is associated with Isaac Newton?','Apple','Pear','Banana','Pineapple','A'],
+      ['Which one of the following scientists is known for his contributions to the science of evolution?','Marie Curie','Thomas Edison','Stephen Hawking','Charles darwin','D'],
+      ['Arnold Schwarzenegger was the governor of which American state?','Florida','Texas','Montana','California','D'],
+      ['Which building was not attacked on 9/11?','World Trade Center South Tower','World Trade Center North Tower','The Pentagon','Statue of Liberty','D'],
+      ['What is the capital city of Australia?','Sydney','Melbourne','Canberra','Brisbane','C'],
+      ['Which of these is not a country in Africa?', 'Burkina Faso', 'Saudi Arabia', 'Cote D\'Ivoire', 'Botswana', 'B'],
+      ['The game of Mah-Jong originated in what country?','England', 'China', 'Japan','Russia','B'],
+     ['What nationality is celebrated on St. Patrick\'s Day?', 'Welsh', 'Mexican', 'Irish', 'American Indian', 'C'],
+    ['What chemical is added to the water in swimming pools?', 'Vinegar', 'Ammonia','Sulphur','Chlorine', 'D'],
+    ['Who wrote the novels that introduced the characters Hercule Poirot and Miss Jane Marple?','Ellery', 'Queen', 'Ruth Rendell', 'H. G. Wells', 'Agatha Christie','D'],
+    ['What is the Italian word for a square or marketplace?','Pisa','Presto', 'Plaza', 'Piazza', 'C'],
+    ['What is the offspring of a male lion and a female tiger called?','Liger', 'Tiglon', 'Tigon','Ligron','A'],
+    ['Between which two planets are asteroids chiefly found?', 'Jupiter and Saturn', 'Mars and Jupiter', 'Neptune and Pluto', 'Saturn and Uranus', 'B'],
+    ['How many different combinations of dots are possible in Braille?', '87' , '49' , '63', '75', 'C']
+    ]
+
+  var rand = Math.floor(Math.random()*14)
+
+  for(var qus = rand; qus< question.length; qus++){
+    for(var answer = 0; answer < question[rand].length; answer++ ){
+      if(answer = 0){
+        $("#question").html = question[qus][answer];
+      }
+      else if (answer = 1) {
+        $("#ans1").text = question[qus][answer];
+      }
+      else if (answer= 2){
+        $("#ans2").text = question[qus][answer];
+      }
+      else if(answer = 3){
+          $("#ans3").text = question[qus][answer];
+      }
+      else if (answer = 4) {
+          $("#ans4").text = question[qus][answer];
+      }
+    }
+  }
+
+  });
+
+</script>
+</head>
+<body>
+<p id="question"></p>
+<label for ="rad1"><span id="ans1"></span></label>
+<input type="radio" id="rad1" value="A">
+<label for ="rad2"><span id="ans2"></span></label>
+<input type="radio" id="rad2" value="B">
+<label for ="rad3"><span id="ans3"></span></label>
+<input type="radio" id="rad3" value="C">
+<label for ="rad4"><span id="ans4"></span></label>
+<input type="radio" id="rad4" value="D">
+<<button type="submit" name="submit"></button>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>

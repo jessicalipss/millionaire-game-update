@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Descendent Selector</title>
+
+<style>
+  #main_content {  width:700px; border:2px solid; background-color:beige; }
+  .highlight {
+    color:blue;
+    background-color: red;
+    }
+
+</style>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.1.js"> </script>
+
+<script>(window.jQuery || document.write('<script src="js/jquery-3.6.1.js"><\/script>'));</script>
+<script defer>
+$(document).ready(function(){
+  var count = 1;
+for(count;count<9;count++){
+    $('button').click(function(){
+   $(this).attr('id',"ID"+ count).addClass('highlight');
+
+  //add function to remove all class named emphasize
+var num = randomGen();
+});
+}
+
+
+
+});
+var numbers=['1','2','3','4','5']
+console.log(numbers);
+function randomGen(){
+  var rand =  Math.floor(Math.random() * 4);
+  for(var count=0; count <=numbers.length;count++){
+      if(rand == numbers[count]){
+      numbers.splice((rand),1);
+      }
+  }
+console.log(numbers);
+}
+
+</script>
+</head>
+<body>
+
+  <div  class="row" >
+    <button type="button" name="button" id="ID1">500</button>
+    <button type="button" name="button" id="ID2">700</button>
+    <button type="button" name="button" id="ID3">900</button>
+    <button type="button" name="button" id="ID4">1000</button>
+    <button type="button" name="button" id="ID5">1500</button>
+    <button type="button" name="button" id="ID6">2500</button>
+    <button type="button" name="button" id="ID7">3000</button>
+    <button type="button" name="button" id="ID8">4000</button>
+    </div>
+    <input type="button" id="rz" onclick="randomGen();">
+</body>
+</html>
+$('#50/50').click(function(){
+
+});

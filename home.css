@@ -1,0 +1,121 @@
+
+
+.button-63 {
+border-radius: 15px;
+border-color: #5124D6;
+background-color: #5D28FA;
+width: 250px;
+height: 40px;
+}
+body{
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 0px;
+  min-height: 110 vh;
+  min-width: 130 vw;
+  display: flex;
+  flex-direction: column;
+ font-size: 18px;
+  }
+
+h1{
+  font-family: 'Playfair Display', serif;
+  color:white;
+}
+p{
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 20px;
+  color:white;
+  opacity: 1;
+  line-height: 26pt;
+}
+
+header{
+  position:absolute;
+  top:0px;
+  width:100%;
+  margin:10px;
+  z-index:10;
+}
+
+ul{
+
+  padding-left:150px;
+  margin:0;
+  width:100%;
+  list-style-type:none;
+
+}
+
+li a{
+  display:block;
+  color:#FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: left;
+}
+
+
+#menuBar{
+        overflow: hidden;
+        display: block;
+        color:white;
+}
+
+.welcome
+{
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  padding-top: 180px;
+  text-align: center;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 110px;   /* Height of the footer */
+  margin: auto;
+}
+
+.footer-basic .social > a {
+ font-size:24px;
+ width:40px;
+ height:40px;
+ line-height:40px;
+ display:inline-block;
+ text-align:center;
+ border-radius:50%;
+ border:1px solid #ccc;
+ margin:0 8px;
+ color: #fff;
+ opacity:0.75;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:5px;
+}
+
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:right;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:5px;
+  margin-right: 15px;
+}
+.logo{
+  width: 100px;
+  height: 50px;
+}
+
+#space{
+  padding-top:170px;
+}

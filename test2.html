@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</style>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.1.js"> </script>
+
+<script>(window.jQuery || document.write('<script src="js/jquery-3.6.1.js"><\/script>'));</script>
+<script defer>
+$(document).ready(function(){
+
+var number = randomNum();
+console.log(number);
+generatequestion(number);
+});
+  var question = [
+    ['What is the boiling point temperature (water)?','50 degree celsius','100 degree celsius','150 degree celsius','200 degree celsius'],
+    ['Which fruit is associated with Isaac Newton?','Apple','Pear','Banana','Pineapple'],
+    ['Which one of the following scientists is known for his contributions to the science of evolution?','Marie Curie','Thomas Edison','Stephen Hawking','Charles darwin'],
+    ['Arnold Schwarzenegger was the governor of which American state?','Florida','Texas','Montana','California'],
+    ['Which building was not attacked on 9/11?','World Trade Center South Tower','World Trade Center North Tower','The Pentagon','Statue of Liberty'],
+    ['What is the capital city of Australia?','Sydney','Melbourne','Canberra','Brisbane'],
+    ['Which of these is not a country in Africa?', 'Burkina Faso', 'Saudi Arabia', 'Cote D\'Ivoire', 'Botswana'],
+    ['The game of Mah-Jong originated in what country?','England', 'China', 'Japan','Russia'],
+   ['What nationality is celebrated on St. Patrick\'s Day?', 'Welsh', 'Mexican', 'Irish', 'American Indian'],
+  ['What chemical is added to the water in swimming pools?', 'Vinegar', 'Ammonia','Sulphur','Chlorine'],
+  ['Who wrote the novels that introduced the characters Hercule Poirot and Miss Jane Marple?','Ellery','Ruth Rendell', 'H. G. Wells', 'Agatha Christie'],
+  ['What is the Italian word for a square or marketplace?','Pisa','Presto', 'Plaza', 'Piazza'],
+  ['What is the offspring of a male lion and a female tiger called?','Liger', 'Tiglon', 'Tigon','Ligron'],
+  ['Between which two planets are asteroids chiefly found?', 'Jupiter and Saturn', 'Mars and Jupiter','Neptune and Pluto','Saturn and Uranus'],
+  ['How many different combinations of dots are possible in Braille?', '87' , '49' , '63', '75']
+  ]
+
+  var answer=['B','A','D','D','D','C','B','B','C','D','D','C','A','B','C','A']
+
+
+  var x = 1
+  var z = 1
+  var numbers=['0','1','2','3','4','5','8','9','10','11','12','13','14','15'];
+  var letter = ['0','A','B','C','D'];
+  function randomNum(){
+rand =  Math.floor(Math.random() * 15 )
+  var checknum = numbers.indexOf(numbers[rand]);
+  if(checknum != -1){
+     numbers.splice((rand+1),1)
+     console.log(rand)
+    }
+  while(checknum == -1){
+   rand =  Math.floor(Math.random() * 15 );
+  if(rand == numbers[rand]){
+   numbers.splice((rand+1),1)
+   console.log(rand)
+  }
+
+    }
+    console.log(rand);
+  return rand;
+  }
+
+  function generatequestion(num){
+  for ( var r=num; r < question.length; r++){
+    document.getElementById('display').innerHTML = question[r][0];
+      document.getElementById('display').value = answer[r];
+    var tes2 =  document.getElementById('display').value;
+    console.log(tes2)
+
+    var newr = r;
+  for (var c = 1; c < question[r].length; c++){
+
+    document.getElementById('quest'+c).innerHTML = question[r][c];
+  }
+  r = 16;
+  }
+  return newr;
+  }
+
+  function chkans () {
+   for (z=1; z < 5; z++){
+     if(document.getElementById("rad"+z).checked){
+     if(document.getElementById("rad"+z).value == document.getElementById('display').value )
+     {
+
+  var number1 = randomNum();
+  console.log(number1)
+  var test = generatequestion(number1);
+   console.console.log(test);
+
+   } else{
+      document.getElementById("success").innerHTML = "You Lose";
+    }
+
+  }
+  }
+  }
+
+</script>
+
+</head>
+<body>
+  <body>
+    <div id="some_div">
+  </div>
+  <section class="row" id="main_content">
+    <button type="button" class="btn1" name="button" id="ID1">500</button>
+    <button type="button" class="btn1" name="button" id="ID2">700</button>
+    <button type="button" class="btn1" name="button" id="ID3">900</button>
+    <button type="button" class="btn1" name="button" id="ID4">1000</button>
+    <button type="button" class="btn1" name="button" id="ID5">1500</button>
+    <button type="button" class="btn1" name="button" id="ID6">2500</button>
+    <button type="button" class="btn1" name="button" id="ID7">3000</button>
+    <button type="button" class="btn1" name="button" id="ID8">4000</button>
+  </section>
+  <section class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+      <img class="imgs" src=""></img>
+    <p id="display"></p>
+    <br>
+    <br>
+    <div id="msgalert" class="col-12 alert alert-warning alert-dismissible fade show" role="alert">
+      <strong> </strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"> </button>
+    </div>
+  <div class="container1">
+    <input type="radio" name="fnum" id="rad1" value="A">
+    <label for="rad1"><p id ="quest1"> </p></label>
+  </div>
+  <br>
+  <br>
+  <div class="container1">
+    <input type="radio" name="fnum" id="rad2" value="B">
+    <label for="rad2"> <p id ="quest2"></p></label>
+  </div>
+  <br>
+  <br>
+  <div class="container1">
+    <input type="radio" name="fnum" id="rad3" value="C">
+    <label for="rad3"><p id ="quest3"> </p></label>
+  </div>
+  <br>
+  <br>
+  <div class="container1">
+    <input type="radio" name="fnum" id="rad4" value="D">
+    <label for="rad4"><p id ="quest4"> </p></label>
+  </div>
+  <br>
+
+  </div>
+
+    <div class="col-md-4">
+      <button type="button" class="btn btn-primary"id="50"> 50/50 </button>
+      <button type="button" class="btn btn-primary"id="call"> Call a friend</button>
+      <button type="button" class="btn btn-primary"id="swap"> swap  question</button>
+    </div>
+    <section class="row">
+      <div class="col-md-6">
+      </div>
+      <div class="col-md-6">
+  <button type="submit" id="submit" onsubmit="randomNum();"> submit</button>
+  </div>
+  </section>
+  <br>
+  <p id="success"></p>
+
+
+</body>
+</html>

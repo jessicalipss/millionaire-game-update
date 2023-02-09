@@ -1,0 +1,60 @@
+
+body{
+  background-repeat:no-repeat;
+   background-size:cover;
+   background: center;
+}
+form{
+  align: center;
+}
+#container{
+  margin: 10px 100px;
+  width: 150px;
+}
+
+#specialbutton{
+  width: 500px;
+}
+#specialbutton input{
+  opacity: 1;
+
+  display: block;
+}
+input{
+    height:34px;
+    width: 300px;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-color: #BDB9DD  ;
+    opacity: 0.6;
+}
+::placeholder {
+opacity: 1;
+}
+
+h1{
+font-family: 'Roboto', sans-serif;
+width:500px;
+color:#624DF8;
+}
+
+label{
+  font-family: 'Mulish', sans-serif;
+  color:#BDB9DD ;
+}
+
+#ddlcoun{
+  opacity:0.2;
+  border-color: #BDB9DD ;
+  color: black;
+}
+input[type="checkbox"] {
+  /* ...existing styles */
+  display: grid;
+  place-content: center;
+}
+.logo{
+  width: 100px;
+  height: 50px;
+}
