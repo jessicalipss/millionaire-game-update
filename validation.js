@@ -9,6 +9,7 @@ if(username != uname1){
   document.getElementById('msg').innerHTML ="Wrong User";
 }
 else if(password != pw){
+   document.getElementById('msg').innerHTML =" ";
   document.getElementById('msg1').innerHTML ="Wrong password";
 }
 else{
